@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>.drm — скоро</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0e1217;
+            color: #eaeef2;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 24px;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* Анимированный логотип */
+        .logo-animation {
+            font-size: clamp(48px, 12vw, 80px);
+            font-weight: 700;
+            color: #b0bfcf;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            white-space: nowrap;
+        }
+
+        .logo-animation span {
+            display: inline-block;
+            animation: flicker 2s infinite alternate;
+        }
+
+        .logo-animation span:nth-child(1) { animation-delay: 0s; }
+        .logo-animation span:nth-child(2) { animation-delay: 0.2s; }
+        .logo-animation span:nth-child(3) { animation-delay: 0.4s; }
+        .logo-animation span:nth-child(4) { animation-delay: 0.6s; }
+
+        @keyframes flicker {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .subtitle {
+            font-size: 20px;
+            color: #9aaebb;
+            margin-top: 16px;
+            margin-bottom: 40px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        /* Кнопка Discord */
+        .discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #5865F2;
+            color: white;
+            font-weight: 600;
+            font-size: 18px;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
+            margin-top: 20px;
+        }
+
+        .discord-btn i {
+            font-size: 24px;
+        }
+
+        .discord-btn:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+        }
+
+        .discord-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 480px) {
+            .logo-animation {
+                font-size: 42px;
+            }
+            .subtitle {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+            .discord-btn {
+                font-size: 16px;
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-animation">
+            <span>.</span><span>d</span><span>r</span><span>m</span>
+        </div>
+        <div class="subtitle">скоро</div>
+        <a href="https://discord.gg/diamondshop" target="_blank" class="discord-btn">
+            <i class="fab fa-discord"></i> discord.gg/diamondshop
+        </a>
+    </div>
+</body>
+</html>
